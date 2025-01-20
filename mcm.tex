@@ -1,0 +1,251 @@
+\documentclass{mcmthesis}
+\mcmsetup{CTeX = false,    % 使用 CTeX 套装时，设置为 true
+          tcn = {0000000}, problem = \textcolor{red}{A},
+          sheet = true, titleinsheet = true, keywordsinsheet = true,
+          titlepage = false, abstract = false}
+        
+\usepackage{newtxtext}     % \usepackage{palatino}
+\usepackage[backend=bibtex]{biblatex}   % for RStudio Complie
+
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{6pt}
+\renewcommand{\contentsname}{\hspace*{\fill}\Large\bfseries Contents \hspace*{\fill}}
+
+\title{}
+
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+
+This is the abstract.
+
+\begin{keywords}
+
+\end{keywords}
+
+\end{abstract}
+
+\maketitle
+
+%% Generate the Table of Contents, if it's needed.
+% \renewcommand{\contentsname}{\centering Contents}
+\tableofcontents        % 若不想要目录, 注释掉该句
+\thispagestyle{empty}
+
+\newpage
+
+\section{Introduction}
+
+\subsection{Background}
+
+
+
+\subsection{Literature Review}
+
+
+
+
+
+\subsection{Restatement of the Problem}
+
+\subsection{Our Work}
+
+
+
+\section{Assumptions and Justification}
+
+In order to simplify the problem and make it more practical, we make the following assumptions:
+
+
+\section{Notations}
+
+\begin{center}
+\begin{tabular}{clc}
+{\bf Symbols} & {\bf Description} & \quad {\bf Unit} \\[0.25cm]
+$h$ & Convection heat transfer coefficient & \quad W/(m$^2 \cdot$ K) 
+\\[0.2cm]
+
+\end{tabular}
+\end{center}
+
+\noindent where we define the main parameters while specific value of those parameters will be given later.
+
+\section{Model Establishment}
+
+
+
+
+\section{Sub-model I : Adding Water Continuously}
+
+
+
+
+
+
+
+
+\section{Sub-model II: Adding Water Discontinuously}
+
+
+
+
+
+
+\section{Sub-model III: Influence of Personal Motions}
+\section{Model Analysis and Sensitivity Analysis}
+
+\subsection{The Influence of Different Bathtubs}
+
+
+\subsubsection{Different Volumes of Bathtubs}
+
+
+%%三线表
+\begin{table}[h] %h表示固定在当前位置
+\centering  %设置居中
+\caption{Variation of some parameters}  %表标题
+\label{tab7} %设置表的引用标签
+\begin{tabular}{ccccccc} %7个c表示7列, c表示每列居中对齐, 还有l和r可选
+\toprule  %画顶端横线
+$V$      & $A_1$   & $A_2$   & $T_2$    & $q_{m1}$ & $q_{m2}$ & $\Phi_q$ \\
+\midrule  %画中间横线
+-15.00\% & -5.06\% & -9.31\% & -12.67\% & -2.67\%  & -14.14\% & -5.80\% \\
+-12.00\% & -4.04\% & -7.43\% & -10.09\% & -2.13\%  & -11.31\% & -4.63\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+-8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
+\bottomrule  %画底部横线
+\end{tabular}
+\end{table}
+
+\section{Strength and Weakness}
+
+\subsection{Strength}
+
+\begin{itemize}
+\item We analyze the problem based on thermodynamic formulas and laws, so that the model we established is of great validity.
+
+\item Our model is fairly robust due to our careful corrections in consideration of real-life situations and detailed sensitivity analysis.
+
+\item Via Fluent software, we simulate the time field of different areas throughout the bathtub. The outcome is vivid for us to understand the changing process.
+
+\item We come up with various criteria to compare different situations, like water consumption and the time of adding hot water. Hence an overall comparison can be made according to these criteria.
+
+\item Besides common factors, we still consider other factors, such as evaporation and radiation heat transfer. The evaporation turns out to be the main reason of heat loss, which corresponds with other scientist’s experimental outcome.
+\end{itemize}
+
+\subsection{Weakness}
+
+\begin{itemize}
+\item Having knowing the range of some parameters from others’ essays, we choose a value from them to apply in our model. Those values may not be reasonable in reality.
+
+\item Although we investigate a lot in the influence of personal motions, they are so complicated that need to be studied further.
+
+\item Limited to time, we do not conduct sensitivity analysis for the influence of personal surface area.
+\end{itemize}
+
+\section{Further Discussion}
+
+In this part, we will focus on different distribution of inflow faucets. Then we discuss about the real-life application of our model.
+
+\begin{itemize}
+\item Different Distribution of Inflow Faucets
+
+In our before discussion, we assume there being just one entrance of inflow.
+
+From the simulating outcome, we find the temperature of bath water is hardly even. So we come up with the idea of adding more entrances.
+
+The simulation turns out to be as follows
+
+
+
+From the above figure, the more the entrances are, the evener the temperature will be. Recalling on the before simulation outcome, when there is only one entrance for inflow, the temperature of corners is quietly lower than the middle area.
+
+In conclusion, if we design more entrances, it will be easier to realize the goal to keep temperature even throughout the bathtub.
+
+\item Model Application
+
+Our before discussion is based on ideal assumptions. In reality, we have to make some corrections and improvement.
+
+\begin{itemize}
+\item[1)] Adding hot water continually with the mass flow of 0.16 kg/s. This way can ensure even mean temperature throughout the bathtub and waste less water.
+
+\item[2)] The manufacturers can design an intelligent control system to monitor the temperature so that users can get more enjoyable bath experience.
+
+\item[3)] We recommend users to add bubble additives to slow down the water being cooler and help cleanse. The additives with lower thermal conductivity are optimal.
+
+\item[4)] The study method of our establishing model can be applied in other area relative to convection heat transfer, such as air conditioners.
+\end{itemize}
+\end{itemize}
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{section}{Reference}
+
+\bibitem{1} Gi-Beum Kim. Change of the Warm Water Temperature for the Development of Smart Healthecare Bathing System. Hwahak konghak. 2006, 44(3): 270-276.
+\bibitem{2} \url{https://en.wikipedia.org/wiki/Convective_heat_transfer#Newton.27s_law_of_cooling}
+\bibitem{3} \url{https://en.wikipedia.org/wiki/Navier\%E2\%80\%93Stokes_equations}
+\bibitem{4} \url{https://en.wikipedia.org/wiki/Computational_fluid_dynamics}
+\bibitem{5} Holman J P. Heat Transfer (9th ed.), New York: McGraw-Hill, 2002. 
+\bibitem{6} Liu Weiguo, Chen Zhaoping, ZhangYin. Matlab program design and application. Beijing: Higher education press, 2002. (In Chinese)
+
+\end{thebibliography}
+
+
+\newpage
+
+\begin{appendices}
+
+\section{First appendix}
+
+
+
+\section{Second appendix}
+
+
+
+\end{appendices}
+
+\newpage
+\newcounter{lastpage}
+\setcounter{lastpage}{\value{page}}
+\thispagestyle{empty} 
+
+\section*{Report on Use of AI}
+
+\begin{enumerate}
+\item OpenAI ChatGPT (Nov 5, 2023 version, ChatGPT-4,) 
+\begin{description}
+\item[Query1:] <insert the exact wording you input into the AI tool> 
+\item[Output:] <insert the complete output from the AI tool>
+\end{description}
+\item OpenAI Ernie (Nov 5, 2023 version, Ernie 4.0) 
+\begin{description}
+\item[Query1:] <insert the exact wording of any subsequent input into the AI tool> 
+\item[Output:] <insert the complete output from the second query>
+\end{description}
+\item Github CoPilot (Feb 3, 2024 version) 
+\begin{description}
+\item[Query1:] <insert the exact wording you input into the AI tool> 
+\item[Output:] <insert the complete output from the AI tool>
+\end{description}
+\item Google Bard (Feb 2, 2024 version) 
+\begin{description}
+\item[Query1:] <insert the exact wording of your query> 
+\item[Output:] <insert the complete output from the AI tool>
+\end{description}
+\end{enumerate}
+
+% 重置页码
+\clearpage
+\setcounter{page}{\value{lastpage}}
+
+\end{document}
+
